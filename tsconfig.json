@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Type Checking */
+    "strict": true, // Aktifkan semua pemeriksaan tipe yang ketat
+    "skipLibCheck": true, // Abaikan pemeriksaan tipe file deklarasi pihak ketiga
+
+    /* Module Resolution */
+    "module": "NodeNext", // Gunakan resolusi modul modern Node.js
+    "moduleResolution": "NodeNext", // Cara TypeScript mencari modul
+    "target": "ES2022", // Targetkan versi JavaScript terbaru
+    "esModuleInterop": true, // Memungkinkan kompatibilitas impor default
+
+    /* Output */
+    "outDir": "./dist", // Direktori untuk hasil kompilasi (jika Anda ingin mengkompilasi)
+    "rootDir": "./src", // Direktori sumber
+
+    /* ts-node-dev Settings */
+    // Ini adalah kunci untuk mengatasi error TS5097 Anda
+    "allowImportingTsExtensions": true,
+    "noEmit": true, // Jangan buat file JS. ts-node-dev menangani eksekusi langsung.
+    "sourceMap": true, // Hasilkan source maps untuk debugging
+    "forceConsistentCasingInFileNames": true // Memastikan konsistensi nama file
+  },
+  "include": ["src/**/*"], // Sertakan semua file di folder src
+  "exclude": ["node_modules"] // Abaikan node_modules
+}
