@@ -29,6 +29,9 @@ const doc = {
             LoginRequest: {
                 identifier:"rai",
                 password:"121212",
+            },
+            ActivationRequest:{
+                code:"abcdef"
             }
         }
     }

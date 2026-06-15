@@ -13,6 +13,7 @@ export interface IUserToken
     | "fullName"
     | "profilePicture"
     | "userName"
+    | "createdAt"
   > {
   id?: Types.ObjectId;
 }
