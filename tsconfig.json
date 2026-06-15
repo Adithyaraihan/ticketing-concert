@@ -19,7 +19,8 @@
     "allowImportingTsExtensions": true,
     "noEmit": true, // Jangan buat file JS. ts-node-dev menangani eksekusi langsung.
     "sourceMap": true, // Hasilkan source maps untuk debugging
-    "forceConsistentCasingInFileNames": true // Memastikan konsistensi nama file
+    "forceConsistentCasingInFileNames": true, // Memastikan konsistensi nama file
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"], // Sertakan semua file di folder src
   "exclude": ["node_modules"] // Abaikan node_modules
