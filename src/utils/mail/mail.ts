@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 })
 
 export interface ISendMail {
-    from: string
+    from?: string
     to: string,
     subject: string,
     html: string
@@ -25,7 +25,7 @@ export interface ISendMail {
 
 export const sendEmail = async ({from, to, subject, html }: ISendMail) => {
    const result = await transporter.sendMail({
-    from,
+    from: from || EMAIL_SMTP_USER,
     to,
     subject,
     html

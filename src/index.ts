@@ -16,7 +16,7 @@ async function init() {
     app.use(cors());
     app.use(bodyParser.json());
 
-    const PORT = 3000;
+    const PORT = 5000;
 
     app.use("/api", router);
     docs(app);

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { encrypt } from "../utils/encryption";
 import { renderMailHtml, sendEmail } from "../utils/mail/mail";
-import { CLIENT_HOST } from "../utils/env";
+import { CLIENT_HOST, EMAIL_SMTP_USER } from "../utils/env";
 
 export interface User {
   fullName: string;
@@ -82,7 +82,7 @@ UserSchema.post("save", async function(doc, next){
   })
 
   await sendEmail({
-    from:"adithyaraihan79@gmail.com",
+    from: EMAIL_SMTP_USER,
     to: user.email,
     subject: "Aktivasi Akun Anda",
     html: contentMail,
